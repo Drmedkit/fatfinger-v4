@@ -1,0 +1,53 @@
+01. (Merk) activatie
+Het Concept: The Ripple Effect
+
+De Animatie: Vanuit het midden (of een hoek) van de card ontstaan langzaam groter wordende cirkels die vervagen naarmate ze de randen bereiken. Denk aan een steen die in het water valt, of een sonarsignaal.
+
+Waarom: Dit symboliseert "impact maken" en "opgemerkt worden". Jouw activatie begint bij een kern en spreidt zich uit naar het publiek (bereik).
+
+Technisch: CSS radial-gradient met een scale en opacity keyframe animatie.
+
+02. Pop-up party
+Het Concept: Rising Confetti / Bubbles
+
+De Animatie: Kleine, abstracte vormpjes (rondjes, driehoekjes of zelfs kleine bliksemschichtjes) die langzaam van beneden naar boven drijven en soms een klein beetje wiebelen of plotseling verdwijnen ("poppen").
+
+Waarom: Dit geeft direct een feestelijk gevoel en past bij het "pop-up" en "surprise" element. Het voelt als champagnebubbels of confetti in de lucht.
+
+Technisch: Particles (deeltjes) die via transform: translateY omhoog bewegen met willekeurige vertragingen.
+
+03. Concepting
+Het Concept: Connecting the Dots
+
+De Animatie: Een netwerk van kleine stipjes waarbij dunne lijntjes zichzelf langzaam tekenen tussen de stippen. Soms licht er eentje even wat feller op (het "idee").
+
+Waarom: Dit visualiseert het brainstormproces, het verbinden van ideeën en het "Out of the box" denken. Het ziet eruit als een levend brein of een schetsblok.
+
+Technisch: Een SVG animatie met stroke-dasharray en stroke-dashoffset voor de lijntjes, of een JavaScript library zoals Particles.js (maar dan heel minimalistisch ingesteld).
+
+04. Stage hosting
+Het Concept: Spotlights & Beams
+
+De Animatie: Twee brede, wazige lichtbundels (soft gradients) die heel langzaam over de achtergrond zwaaien (van links naar rechts en terug), alsof ze een podium afzoeken.
+
+Waarom: Dit is de letterlijke vertaling van "Stage hosting" en "Artist handling". Je zet de productie in de spotlight.
+
+Technisch: Grote, wazige conic-gradient of linear-gradient lagen die roteren of pannen met mix-blend-mode: overlay.
+
+05. Business event
+Het Concept: The Living Grid
+
+De Animatie: Een strak geometrisch patroon (bijvoorbeeld zeshoeken of vierkanten) op de achtergrond, maar in plaats van statisch, 'ademt' het patroon. De lijnen golven heel lichtjes of de vakjes veranderen langzaam van kleursterkte.
+
+Waarom: Het grid staat voor "Serious business" en structuur, maar de golvende beweging laat zien dat het "niet-zo-standaard" is. Het breekt de stijfheid van een zakelijk evenement.
+
+Technisch: Een herhalend CSS background-image patroon dat je animeert met perspective of simpelweg de positie diagonaal laat glijden.
+
+06. Personeelsfeest
+Het Concept: Merging Blobs (Lava Lamp)
+
+De Animatie: Organische, vloeibare vormen ("blobs") die langzaam ronddrijven en samensmelten wanneer ze elkaar raken.
+
+Waarom: Dit is de ultieme visuele metafoor voor "bonding" en "teambuilding". Individuen (losse blobs) komen samen tot één geheel. Het oogt vriendelijk, dynamisch en sociaal.
+
+Technisch: SVG blobs met een animatie, of een CSS filter truc (contrast verhogen op wazige elementen) om het "gooey" effect te krijgen
