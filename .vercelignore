@@ -1,0 +1,5 @@
+node_modules
+dist
+public/assets/*.mp4
+public/assets/*.mkv
+public/assets/ADE24*.png
