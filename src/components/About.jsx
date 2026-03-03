@@ -34,6 +34,7 @@ export default function About() {
                         <img
                             src="/assets/248347591_4356372774432461_1351524117958465837_n.jpg"
                             alt="Karlijn & Lonneke"
+                            loading="lazy"
                             className="w-full h-full object-cover mix-blend-overlay opacity-80"
                             onError={(e) => { e.target.style.display = 'none'; }}
                         />

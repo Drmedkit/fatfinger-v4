@@ -118,6 +118,7 @@ export default function Portfolio() {
                                     <img
                                         src={proj.img}
                                         alt={proj.title}
+                                        loading="lazy"
                                         className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-30"
                                         onError={(e) => { e.target.style.display = 'none'; }}
                                     />
@@ -178,6 +179,7 @@ export default function Portfolio() {
                                         <img
                                             src={selectedProject.img}
                                             alt={selectedProject.title}
+                                            loading="lazy"
                                             className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-50"
                                         />
                                     )}
@@ -213,10 +215,10 @@ export default function Portfolio() {
                                     {/* Placeholder content grid */}
                                     <div className="drawer-item grid grid-cols-2 gap-4">
                                         <div className="aspect-[4/3] bg-text/5 rounded-2xl overflow-hidden relative group">
-                                            {selectedProject.img && <img src={selectedProject.img} className="w-full h-full object-cover opacity-60 mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-500" alt="" />}
+                                            {selectedProject.img && <img src={selectedProject.img} loading="lazy" className="w-full h-full object-cover opacity-60 mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-500" alt="" />}
                                         </div>
                                         <div className="aspect-[4/3] bg-text/5 rounded-2xl relative overflow-hidden group">
-                                            {selectedProject.img && <img src={selectedProject.img} className="w-full h-full object-cover opacity-60 mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-500 scale-110" alt="" />}
+                                            {selectedProject.img && <img src={selectedProject.img} loading="lazy" className="w-full h-full object-cover opacity-60 mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-500 scale-110" alt="" />}
                                         </div>
                                     </div>
                                 </div>

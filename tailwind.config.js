@@ -21,8 +21,7 @@ export default {
         playfair: ['Playfair Display', 'serif'],
         outfit: ['Outfit', 'sans-serif'],
         mono: ['Space Mono', 'monospace'],
-        inter: ['Inter', 'sans-serif'],
-        fira: ['Fira Code', 'monospace']
+        inter: ['Inter', 'sans-serif']
       }
     },
   },

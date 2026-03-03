@@ -9,6 +9,7 @@ export default function Footer() {
                         <img
                             src="/assets/Fat-Finger-logo_1763898136388.png"
                             alt="Fat Finger Logo"
+                            loading="lazy"
                             className="h-8 md:h-10 w-auto object-contain"
                         />
                     </div>

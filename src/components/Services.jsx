@@ -167,6 +167,7 @@ export default function Services() {
                                 <img
                                     src={slide.img}
                                     alt=""
+                                    loading="lazy"
                                     className={`absolute inset-0 w-full h-full object-cover max-w-none ${slide.imgClass || 'opacity-20 mix-blend-overlay'}`}
                                 />
                             )}
@@ -185,7 +186,7 @@ export default function Services() {
                                 </>
                             )}
                             {slide.ambient === 'party' && (
-                                Array.from({ length: 20 }).map((_, j) => (
+                                Array.from({ length: 8 }).map((_, j) => (
                                     <div
                                         key={j}
                                         className="absolute w-2 h-4 bg-white/40"
@@ -207,23 +208,23 @@ export default function Services() {
                             {slide.ambient === 'activation' && (
                                 <>
                                     {/* Dark, elegant neon orbs that slowly float */}
-                                    <div className="absolute top-[10%] left-[20%] w-[40vw] h-[40vw] bg-[#00D4FF] rounded-full mix-blend-screen opacity-30 blur-[100px] animate-[floatParticle_20s_infinite]" />
-                                    <div className="absolute bottom-[10%] right-[10%] w-[50vw] h-[50vw] bg-[#FF0099] rounded-full mix-blend-screen opacity-20 blur-[120px] animate-[floatParticle_25s_infinite_reverse]" />
+                                    <div className="absolute top-[10%] left-[20%] w-[min(40vw,400px)] h-[min(40vw,400px)] bg-[#00D4FF] rounded-full mix-blend-screen opacity-30 blur-[100px] animate-[floatParticle_20s_infinite]" />
+                                    <div className="absolute bottom-[10%] right-[10%] w-[min(50vw,500px)] h-[min(50vw,500px)] bg-[#FF0099] rounded-full mix-blend-screen opacity-20 blur-[120px] animate-[floatParticle_25s_infinite_reverse]" />
                                     {/* Edge highlight to frame the content slightly */}
                                     <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#00D4FF]/30 to-transparent" />
                                 </>
                             )}
                             {slide.ambient === 'popup' && (
                                 <>
-                                    <div className="absolute top-[20%] right-[10%] w-[30vw] h-[30vw] bg-[#FF0099] mix-blend-screen opacity-20 blur-[100px] rounded-full animate-[floatParticle_15s_infinite]" />
-                                    <div className="absolute bottom-[10%] left-[10%] w-[20vw] h-[20vw] bg-[#00D4FF] mix-blend-screen opacity-10 blur-[80px] rounded-full animate-[floatParticle_20s_infinite_reverse]" />
+                                    <div className="absolute top-[20%] right-[10%] w-[min(30vw,300px)] h-[min(30vw,300px)] bg-[#FF0099] mix-blend-screen opacity-20 blur-[100px] rounded-full animate-[floatParticle_15s_infinite]" />
+                                    <div className="absolute bottom-[10%] left-[10%] w-[min(20vw,200px)] h-[min(20vw,200px)] bg-[#00D4FF] mix-blend-screen opacity-10 blur-[80px] rounded-full animate-[floatParticle_20s_infinite_reverse]" />
                                 </>
                             )}
                         </div>
 
                         {/* Content */}
                         <div className="relative z-10 max-w-4xl mx-auto w-full">
-                            <div className="font-mono text-[40px] md:text-[80px] leading-none opacity-15 absolute top-0 right-0 -translate-y-1/2 md:-translate-y-full uppercase whitespace-nowrap truncate max-w-[120%] pl-4" style={{ WebkitTextFillColor: 'transparent', WebkitTextStroke: '2px currentColor' }}>
+                            <div className="font-mono text-[clamp(24px,8vw,80px)] leading-none opacity-15 absolute top-0 right-0 -translate-y-1/2 md:-translate-y-full uppercase whitespace-nowrap truncate max-w-[120%] pl-4 hidden sm:block" style={{ WebkitTextFillColor: 'transparent', WebkitTextStroke: '2px currentColor' }}>
                                 {slide.label}
                             </div>
 

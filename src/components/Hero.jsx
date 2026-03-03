@@ -18,7 +18,7 @@ export default function Hero() {
                 gsap.to(scrollIndicator.current, { opacity: 1, duration: 0.3 });
             }
         };
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, [scrolled]);
 
@@ -40,16 +40,11 @@ export default function Hero() {
         <section ref={container} className="relative w-full min-h-[100dvh] flex items-end">
             {/* Background */}
             <div className="absolute inset-0 z-0 overflow-hidden">
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
+                <img
+                    src="/assets/240519-174143-7th-Daphne Termeer-0203-HR.JPG"
+                    alt=""
                     className="w-full h-full object-cover"
-                    poster="/assets/240519-174143-7th-Daphne Termeer-0203-HR.JPG"
-                >
-                    <source src="/assets/Fat Finger - Club 7 Alles Geven 2023 (1).mp4" type="video/mp4" />
-                </video>
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/80 to-transparent pt-[60%]" style={{ background: 'linear-gradient(to top, var(--bg) 0%, rgba(255, 245, 235, 0.8) 30%, transparent 60%)' }}></div>
             </div>
 
@@ -88,7 +83,7 @@ export default function Hero() {
 
             {/* Scroll indicator */}
             <div ref={scrollIndicator} className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
-                <span className="font-mono text-[9px] uppercase tracking-widest text-text-muted">Scroll</span>
+                <span className="font-mono text-[11px] uppercase tracking-widest text-text-muted">Scroll</span>
                 <ChevronDown className="w-4 h-4 text-text animate-bounce opacity-50" />
             </div>
         </section>
