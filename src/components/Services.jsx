@@ -94,6 +94,9 @@ export default function Services() {
             const slides = slidesRef.current;
             if (!slides.length) return;
 
+            // Set initial state
+            gsap.set(slides.slice(1), { opacity: 0 });
+
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: wrapperRef.current,
@@ -105,7 +108,7 @@ export default function Services() {
                         const progress = self.progress;
                         // 6 slides -> 5 transitions -> length of each is 1/5
                         const index = Math.min(5, Math.floor(progress * 5.99));
-                        if (index !== activeSlide) setActiveSlide(index);
+                        setActiveSlide(index);
                     }
                 }
             });
@@ -121,16 +124,13 @@ export default function Services() {
                     .fromTo(slide, { opacity: 0, scale: 1.05 }, { opacity: 1, scale: 1, duration: 1 }, i - 0.5);
             });
 
-            // Set initial state
-            gsap.set(slides.slice(1), { opacity: 0 });
-
             return () => {
                 tl.kill();
             };
         });
 
         return () => mm.revert();
-    }, [activeSlide]);
+    }, []);
 
     return (
         <div id="services-section">
@@ -155,7 +155,7 @@ export default function Services() {
                     <div
                         key={i}
                         ref={(el) => (slidesRef.current[i] = el)}
-                        className={`w-full md:absolute md:inset-0 min-h-[80vh] md:min-h-screen flex items-center p-6 md:p-16 
+                        className={`relative w-full md:absolute md:inset-0 min-h-[80vh] md:min-h-screen flex items-center p-6 md:p-16 overflow-hidden
               ${slide.bgClass} ${slide.textClass}
               transition-colors duration-500 ease-in-out
             `}

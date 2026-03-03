@@ -126,7 +126,7 @@ export default function Portfolio() {
                             </div>
 
                             {/* Content */}
-                            <div className="absolute inset-0 p-10 md:p-14 flex flex-col justify-end">
+                            <div className="absolute inset-0 p-6 md:p-14 flex flex-col justify-end">
                                 <div className="font-mono text-[10px] uppercase tracking-wider text-white/40 mb-3 transition-colors group-hover:text-white/60">
                                     {proj.subtitle}
                                 </div>
@@ -189,7 +189,7 @@ export default function Portfolio() {
                                     <div className="drawer-item font-mono text-[12px] uppercase tracking-wider text-accent-1 mb-4">
                                         {selectedProject.subtitle}
                                     </div>
-                                    <h2 className="drawer-item font-clash font-bold text-5xl md:text-7xl text-white leading-tight mb-6">
+                                    <h2 className="drawer-item font-clash font-bold text-3xl md:text-7xl text-white leading-tight mb-6">
                                         {selectedProject.title}
                                     </h2>
                                 </div>
